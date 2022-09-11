@@ -7,7 +7,19 @@
 </head>
 
 <body>
-<h1> <%= kindOfDay %> </h1>
+    <h1> <%= kindOfDay %> </h1>
+
+    <ul>
+        <%# Iterate through all items and add a new list item for each %>
+<% for( let i = 0; i < newListItems.length; i++ ) { %>
+        <li><%= newListItems[i] %> </li>
+<% } %>
+    </ul>
+    <%# Add form here to post new list itemes %>
+    <form action="/" method="post">
+        <input type="text" name="newListItem">
+        <button type="submit" name="button">Add</button>
+    </form>
 </body>
 
 </html>
